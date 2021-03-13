@@ -66,6 +66,7 @@ namespace FlashcardApp.Controllers
         // POST: cards/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("id,front,back,webReference,catagory")] card card)
@@ -80,6 +81,7 @@ namespace FlashcardApp.Controllers
         }
 
         // GET: cards/Edit/5
+        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -98,6 +100,7 @@ namespace FlashcardApp.Controllers
         // POST: cards/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("id,front,back,webReference,catagory")] card card)
@@ -131,6 +134,7 @@ namespace FlashcardApp.Controllers
         }
 
         // GET: cards/Delete/5
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -151,6 +155,7 @@ namespace FlashcardApp.Controllers
         // POST: cards/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var card = await _context.card.FindAsync(id);

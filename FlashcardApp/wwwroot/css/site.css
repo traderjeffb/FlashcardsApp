@@ -69,3 +69,75 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+.main-title{
+    font-size: 36px;
+  
+}
+.text-center{
+    width:800px;
+}
+.flashcard-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flashcard {
+    background-color: antiquewhite;
+    margin: auto;
+    height: 500px;
+    width: 800px;
+}
+.box1 {
+    background-color: lightgray;
+    height: 300px;
+    width: 600px;
+    border: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-right:60px;
+}
+
+.buttonStack {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    float: right;
+    height: 400px;
+    width: 60px;
+}
+.inner-buttonStack {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.stack-btn {
+    align-content: center;
+    background-color: red;
+    border: 1px solid;
+    border-radius: 3px;
+    height: 25px;
+    width: 30px;
+}
+.ranking-text{
+    align-content: center;
+    text-align:center;
+    padding:0px;
+    margin:0px;
+    font-size:12px;
+    color:darkblue;
+}
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
